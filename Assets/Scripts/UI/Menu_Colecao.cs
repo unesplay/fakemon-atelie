@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Menu_Opcoes : Menu
+public class Menu_Colecao : Menu
 {
     [Header("referencias a outros menus")]
     public GameObject menu_main = null;
