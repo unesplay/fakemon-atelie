@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Menu_Colecao : Menu
 {
-    [Header("referencias a outros menus")]
+    [Header("Referencias: outros Menus")]
     public GameObject menu_main = null;
 
     void Start()

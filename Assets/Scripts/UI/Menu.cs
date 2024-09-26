@@ -15,5 +15,4 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(target, LoadSceneMode.Single);
     }
-
 }
