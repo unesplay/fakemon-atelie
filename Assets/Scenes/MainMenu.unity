@@ -931,7 +931,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2058151868}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1192,7 +1192,7 @@ GameObject:
   - component: {fileID: 1540660965}
   - component: {fileID: 1540660964}
   m_Layer: 5
-  m_Name: menu-batalha
+  m_Name: menu-encontrar-batalha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1207,10 +1207,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1540660963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc8663eff16d1074996a5609ad47beb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 041529e1200651b4cbf1fa5e7c824f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   menu_main: {fileID: 1575498831}
+  cena_lobby: {fileID: 0}
 --- !u!224 &1540660965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1226,7 +1227,7 @@ RectTransform:
   - {fileID: 1418513272}
   - {fileID: 37477555}
   m_Father: {fileID: 2058151868}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1259,7 +1260,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544028587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 028fc38e0457fea4ab9025e0ebd55a35, type: 3}
+  m_Script: {fileID: 11500000, guid: c746588e9c708ae448d133a7dab5685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   menu_main: {fileID: 1575498831}
@@ -1278,7 +1279,7 @@ RectTransform:
   - {fileID: 2018449053}
   - {fileID: 1683375845}
   m_Father: {fileID: 2058151868}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1321,7 +1322,7 @@ RectTransform:
   - {fileID: 695300828}
   - {fileID: 632404944}
   m_Father: {fileID: 2058151868}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1337,13 +1338,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1575498831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d31a5a1074a41f64f9b1a13d2f2c3528, type: 3}
+  m_Script: {fileID: 11500000, guid: c4ad3bdc644d54146ac3dae748fba38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu_batalha: {fileID: 1540660963}
-  menu_criar: {fileID: 0}
+  menu_encontrar_batalha: {fileID: 1540660963}
   menu_colecao: {fileID: 1544028587}
   menu_opcoes: {fileID: 1762158554}
+  cena_criar: {fileID: 0}
 --- !u!224 &1683375845 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
@@ -1381,7 +1382,7 @@ RectTransform:
   - {fileID: 869740672}
   - {fileID: 1989576151}
   m_Father: {fileID: 2058151868}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1397,7 +1398,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1762158554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0444382732461324ba62edbeda4ceab7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f75d2211925b344aa7d49b637db5462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   menu_main: {fileID: 1575498831}
@@ -1708,11 +1709,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 890102463}
   - {fileID: 1575498832}
   - {fileID: 1540660965}
   - {fileID: 1544028589}
   - {fileID: 1762158555}
+  - {fileID: 890102463}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2027,7 +2028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974909, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: batalhar
+      value: encontrarBatalha
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974909, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2039,7 +2040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974911, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_Name
-      value: botao-batalha
+      value: botao-encontrar-batalha
       objectReference: {fileID: 0}
     - target: {fileID: 7549440292175162537, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_text

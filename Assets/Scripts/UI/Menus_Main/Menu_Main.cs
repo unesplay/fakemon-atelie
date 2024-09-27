@@ -5,7 +5,7 @@ using UnityEngine;
 public class Menu_Main : Menu
 {
     [Header("Referencias: outros Menus")]
-    public GameObject menu_batalha = null;
+    public GameObject menu_encontrar_batalha = null;
     public GameObject menu_colecao = null;
     public GameObject menu_opcoes = null;
 
@@ -14,7 +14,7 @@ public class Menu_Main : Menu
 
     void Start()
     {
-        if(menu_batalha == null){ Debug.LogWarning("objeto de referencia Menu_Batalha nao esta settado em " + gameObject.name); }
+        if(menu_encontrar_batalha == null){ Debug.LogWarning("objeto de referencia Menu_Encontrar_Batalha nao esta settado em " + gameObject.name); }
         if(menu_colecao == null){ Debug.LogWarning("objeto de referencia Menu_Colecao nao esta settado em " + gameObject.name); }
         if(menu_opcoes == null){ Debug.LogWarning("objeto de referencia Menu_Opcoes nao esta settado em " + gameObject.name); }
 
@@ -22,7 +22,7 @@ public class Menu_Main : Menu
     }
 
     // Menus
-    public void batalhar() { navegarMenuLocal(menu_batalha); }
+    public void encontrarBatalha() { navegarMenuLocal(menu_encontrar_batalha); }
     public void dex() { navegarMenuLocal(menu_colecao); }
     public void opcoes() { navegarMenuLocal(menu_opcoes); }
     
