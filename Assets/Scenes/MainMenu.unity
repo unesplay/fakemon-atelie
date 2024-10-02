@@ -424,11 +424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 344
+      value: -340.7
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -161
+      value: -160.5
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -768,11 +768,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 344
+      value: -340.7
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -161
+      value: -160.5
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1125,11 +1125,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 344
+      value: -340.7
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -161
+      value: -160.5
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu_main: {fileID: 1575498831}
-  cena_lobby: {fileID: 0}
+  cena_lobby: 
 --- !u!224 &1540660965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   menu_encontrar_batalha: {fileID: 1540660963}
   menu_colecao: {fileID: 1544028587}
   menu_opcoes: {fileID: 1762158554}
-  cena_criar: {fileID: 0}
+  cena_criar: 
 --- !u!224 &1683375845 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
@@ -1795,11 +1795,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 344
+      value: -340.7
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -161
+      value: -160.5
       objectReference: {fileID: 0}
     - target: {fileID: 7549440290600974908, guid: 53c62a13f7b3206499a8e0bb365b2a93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
