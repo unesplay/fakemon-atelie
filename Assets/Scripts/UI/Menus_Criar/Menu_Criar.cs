@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Menu_Criar : MonoBehaviour
+public class Menu_Criar : Menu
 {
-    // Start is called before the first frame update
+    [Header("Referencias: outras Cenas")]
+    public string cena_main = null;
+    
     void Start()
     {
-        
+        checkCena(cena_main);  
     }
+    
+    // Cenas
+    public void sair() { Debug.Log("fon (sair)"); }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    // Outros
+    public void pronto() { Debug.Log("fon (pronto)"); }
 }
