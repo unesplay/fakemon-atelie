@@ -9,7 +9,7 @@ public class Menu_Opcoes : Menu
 
     void Start()
     {
-        if(menu_main == null){ Debug.LogWarning("objeto de referencia Menu_Main nao esta settado em " + gameObject.name); }
+        checkMenu(menu_main);
     }
 
     // Menus

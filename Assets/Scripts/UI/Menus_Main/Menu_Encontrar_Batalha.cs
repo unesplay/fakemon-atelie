@@ -8,13 +8,13 @@ public class Menu_Encontrar_Batalha : Menu
     public GameObject menu_main = null;
 
     [Header("Referencias: outras Cenas")]
-    public GameObject cena_lobby = null;
+    public string cena_lobby = null;
 
     void Start()
     {
-        if(menu_main == null){ Debug.LogWarning("objeto de referencia Menu_Main nao esta settado em " + gameObject.name); }
-
-        if(cena_lobby == null){ Debug.LogWarning("objeto de referencia Cena_Lobby nao esta settado em " + gameObject.name); }
+        checkMenu(menu_main);
+        
+        checkCena(cena_lobby);
     }
 
     // Menus

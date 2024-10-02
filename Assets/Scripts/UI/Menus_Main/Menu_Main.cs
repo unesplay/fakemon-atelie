@@ -10,15 +10,15 @@ public class Menu_Main : Menu
     public GameObject menu_opcoes = null;
 
     [Header("Referencias: outras Cenas")]
-    public GameObject cena_criar = null;
+    public string cena_criar = null;
 
     void Start()
     {
-        if(menu_encontrar_batalha == null){ Debug.LogWarning("objeto de referencia Menu_Encontrar_Batalha nao esta settado em " + gameObject.name); }
-        if(menu_colecao == null){ Debug.LogWarning("objeto de referencia Menu_Colecao nao esta settado em " + gameObject.name); }
-        if(menu_opcoes == null){ Debug.LogWarning("objeto de referencia Menu_Opcoes nao esta settado em " + gameObject.name); }
-
-        if(cena_criar == null){ Debug.LogWarning("objeto de referencia Cena_Criar nao esta settado em " + gameObject.name); }
+        checkMenu(menu_encontrar_batalha);
+        checkMenu(menu_colecao);
+        checkMenu(menu_opcoes);
+        
+        checkCena(cena_criar);
     }
 
     // Menus
