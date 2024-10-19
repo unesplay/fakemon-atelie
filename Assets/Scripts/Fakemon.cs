@@ -20,7 +20,7 @@ public class Fakemon
         Autor = aut;
 
         Tipo = tp;
-        TipoSec = tipoSec;
+        TipoSec = tps;
 
         atributos = new Atributos_Fakemon(9, vd, atk, def, vel);
 
