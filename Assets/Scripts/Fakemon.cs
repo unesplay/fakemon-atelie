@@ -31,7 +31,7 @@ public class Fakemon
     public string Nome { get => nome; set => nome = value ?? nome; }
     public string Autor { get => autor; set => autor = value ?? autor; }
 
-    public Tipos_Mon Tipo { get => tipo; set => tipo = value ?? tipo; }
+    public Tipos_Mon Tipo { get => tipo; set => tipo = value; }
     public Tipos_Mon TipoSec { get => tipoSec; set => tipoSec = value; }
 
     public Atributos_Fakemon Atributos { get => atributos; }
@@ -40,7 +40,7 @@ public class Fakemon
 }
 
 
-class Atributos_Fakemon
+public class Atributos_Fakemon
 {
     protected int vida, ataque, defesa, velocidade;
     protected int limite;
@@ -63,12 +63,12 @@ class Atributos_Fakemon
 }
 
 
-class Moveset_Fakemon
+public class Moveset_Fakemon
 {
     protected Movimento moveA, moveB, moveC, moveD;
 
 
-    public Atributos_Fakemon(Movimento a, Movimento b, Movimento c, Movimento d)
+    public Moveset_Fakemon(Movimento a, Movimento b, Movimento c, Movimento d)
     {
         MoveA = a;
         MoveB = b;
@@ -84,7 +84,7 @@ class Moveset_Fakemon
 }
 
 
-class Movimento
+public class Movimento
 {
     protected string nome;
     protected Tipos_Mon tipo;
@@ -102,7 +102,7 @@ class Movimento
     }
 
 
-    public string Nome { get => Snome; }
+    public string Nome { get => nome; }
     public Tipos_Mon Tipo { get => tipo; }
     public int Poder { get => poder; }
     public string Descricao { get => descricao; }

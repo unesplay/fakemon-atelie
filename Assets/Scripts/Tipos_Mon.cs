@@ -1,4 +1,5 @@
-public enum Tipos_Fakemon {
+public enum Tipos_Mon 
+{
     Agua,
     Fogo,
     Mato
