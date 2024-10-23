@@ -16,8 +16,8 @@ public class Buttons : MonoBehaviour
     {
         
     }
+    public Color novaCor;
     public GameObject[] botoes;
-    
     public Color startAtual;
     public Color endAtual;
     public GameObject Draw;
@@ -26,34 +26,44 @@ public class Buttons : MonoBehaviour
         switch (Cor)
         {
             case "Vermelho":
-                Draw.GetComponent<Draw_Engine>().MudarCor(Color.red);
+                novaCor = new Color32(0xD2, 0x4C, 0x3A, 0xFF); 
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Azul":
-                Draw.GetComponent<Draw_Engine>().MudarCor(Color.blue);
+                novaCor = new Color32(0x70, 0xAA, 0xAC, 0xFF); 
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Verde":
-                Draw.GetComponent<Draw_Engine>().MudarCor(Color.green);
+                novaCor = new Color32(0x79, 0xA2, 0x6A, 0xFF);
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Amarelo":
-                Draw.GetComponent<Draw_Engine>().MudarCor(Color.yellow);
+                novaCor = new Color32(0xF4, 0xF1, 0xBB, 0xFF);
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Preto":
-                Draw.GetComponent<Draw_Engine>().MudarCor(Color.black);
+                novaCor = new Color32(0x0F, 0x0F, 0x04, 0xFF);
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Branco":
-                Draw.GetComponent<Draw_Engine>().MudarCor(Color.white);
+                novaCor = new Color32(0xE3, 0xDE, 0xE7, 0xFF);
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Rosa":
-                Draw.GetComponent<Draw_Engine>().MudarCor(Color.magenta);
+                novaCor = new Color32(0xD8, 0x9C, 0xD3, 0xFF);
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Laranja":
-                Draw.GetComponent<Draw_Engine>().MudarCor(new Color(1, 0.5f, 0));
+                novaCor = new Color32(0xDF, 0x80, 0x41, 0xFF);
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Roxo":
-                Draw.GetComponent<Draw_Engine>().MudarCor(new Color(0.5f, 0, 0.5f));
+                novaCor = new Color32(0x85, 0x70, 0xC2, 0xFF);
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Ciano":
-                Draw.GetComponent<Draw_Engine>().MudarCor(Color.cyan);
+                novaCor = new Color32(0x7C, 0xD8, 0xC1, 0xFF);
+                Draw.GetComponent<Draw_Engine>().MudarCor(novaCor);
                 break;
             case "Aleatorio":
             default:

@@ -10,6 +10,13 @@ public class Draw_Engine : MonoBehaviour
     public GameObject brush;
     LineRenderer currentLineRenderer;
     Vector2 lastPos;
+    public Rect drawingArea = new Rect(184, 761, 600, 600);
+    bool IsWithinDrawingArea()
+    {
+        Vector2 mousePos = Input.mousePosition;
+        return drawingArea.Contains(mousePos);
+    }
+    
     void Drawing()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -38,24 +45,39 @@ public class Draw_Engine : MonoBehaviour
     }
     
     void CreateBrush()
+{
+    GameObject brushInstance = Instantiate(brush);
+    brushInstance.layer = LayerMask.NameToLayer("TheStrokes");
+    currentLineRenderer = brushInstance.GetComponent<LineRenderer>();
+
+    if (currentLineRenderer != null)
     {
-        GameObject brushInstance = Instantiate(brush);
-        brushInstance.GetComponent<LineRenderer>().startColor = startAtual;
-        brushInstance.GetComponent<LineRenderer>().endColor = endAtual;
+        currentLineRenderer.startColor = startAtual;
+        currentLineRenderer.endColor = endAtual;
 
-        currentLineRenderer = brushInstance.GetComponent<LineRenderer>();
         Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
-
         currentLineRenderer.SetPosition(0, mousePos);
         currentLineRenderer.SetPosition(1, mousePos);
     }
+    else
+    {
+        Debug.LogError("LineRenderer não foi encontrado no brushInstance!");
+    }
+}
     
     void AddPoint(Vector2 pointPos)
+{
+    if (currentLineRenderer != null)
     {
         currentLineRenderer.positionCount++;
         int positionIndex = currentLineRenderer.positionCount - 1;
         currentLineRenderer.SetPosition(positionIndex, pointPos);
     }
+    else
+    {
+        Debug.LogWarning("currentLineRenderer está nulo");
+    }
+}
     void Start()
     {
         
@@ -64,6 +86,9 @@ public class Draw_Engine : MonoBehaviour
    
     void Update()
     {
-        Drawing();
+        if (IsWithinDrawingArea())
+        {
+            Drawing();  
+        }
     }
 }
