@@ -1,4 +1,4 @@
-public enum Tipos_Mon
+public enum FakemonData
 {
     Fogo,
     Agua,

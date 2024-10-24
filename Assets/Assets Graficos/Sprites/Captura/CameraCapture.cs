@@ -11,6 +11,7 @@ public class CameraCapture : MonoBehaviour
     public InputField fileNameInput; // Referência ao InputField
     private string nomeFakemon;
     private string descricaoFakemon;
+    private string tipoFakemon;
     private RenderTexture renderTexture;
     [System.Serializable]
     public class FakemonData
@@ -18,6 +19,7 @@ public class CameraCapture : MonoBehaviour
         public string name; // Nome do Fakemon
         public string description; // Descrição do Fakemon
         public string fileName; // Nome do arquivo da imagem
+        public string type; // Tipo do Fakemon
     }
 
     
@@ -88,6 +90,7 @@ public class CameraCapture : MonoBehaviour
         {
             name = nomeFakemon,
             fileName = fileName,
+            type = tipoFakemon,
             description = descricaoFakemon, // Exemplo de descrição
         };
         // Liberar memória
