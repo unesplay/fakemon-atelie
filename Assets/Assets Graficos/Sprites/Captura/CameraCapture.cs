@@ -1,6 +1,7 @@
 using System.IO;
 using UnityEngine;
-using UnityEngine.UI; // Não esqueça de incluir esta diretiva
+using UnityEngine.UI;
+using System;
 
 public class CameraCapture : MonoBehaviour
 {
@@ -8,8 +9,16 @@ public class CameraCapture : MonoBehaviour
     public int imageWidth = 1920; // Largura da imagem
     public int imageHeight = 1080; // Altura da imagem
     public InputField fileNameInput; // Referência ao InputField
-
+    private string nomeFakemon;
+    private string descricaoFakemon;
     private RenderTexture renderTexture;
+    [System.Serializable]
+    public class FakemonData
+    {
+        public string name; // Nome do Fakemon
+        public string description; // Descrição do Fakemon
+        public string fileName; // Nome do arquivo da imagem
+    }
 
     
     void Start()
@@ -24,8 +33,16 @@ public class CameraCapture : MonoBehaviour
         captureCamera.clearFlags = CameraClearFlags.SolidColor;
         captureCamera.backgroundColor = new Color(0, 0, 0, 0); // Fundo transparente
     }
+    public void SetNomeFakemon(string nome)
+    {
+        nomeFakemon = nome;
+    } 
+    public void SetDescricaoFakemon(string description)
+    {
+        descricaoFakemon = description;
+    }
 
-    void CaptureImage()
+    public void CaptureImage()
     {
         captureCamera.clearFlags = CameraClearFlags.Nothing;
         captureCamera.Render();
@@ -50,16 +67,16 @@ public class CameraCapture : MonoBehaviour
         {
             Directory.CreateDirectory(folderPath);
         }
-
-        // Gerar o nome do arquivo a partir do InputField
-        string fileName = fileNameInput.text; // Obter o texto do InputField
+        string fileName = nomeFakemon; 
         if (string.IsNullOrWhiteSpace(fileName))
         {
-            fileName = "FakemonInomeado" + ; // Nome padrão se o InputField estiver vazio
+            fileName = "FakemonInomeado";
         }
-        string filePath = Path.Combine(folderPath, fileName + ".png"); // Adicionar a extensão PNG
-
-        // Converter a Texture2D para bytes (em formato PNG)
+    
+        
+        string timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"); 
+        string filePath = Path.Combine(folderPath, $"{fileName}_{timestamp}.png");
+        
         byte[] bytes = texture.EncodeToPNG();
 
         // Salvar os bytes no arquivo
@@ -67,19 +84,19 @@ public class CameraCapture : MonoBehaviour
 
         Debug.Log("Imagem PNG capturada e salva em: " + filePath);
 
+        FakemonData fakemonData = new FakemonData
+        {
+            name = nomeFakemon,
+            fileName = fileName,
+            description = descricaoFakemon, // Exemplo de descrição
+        };
         // Liberar memória
         Destroy(texture);
     }
-
     void Update()
     {
-        // Pressione a tecla 'C' para capturar a imagem
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            CaptureImage();
-        }
-    }
 
+    }
     void OnDisable()
     {
         // Limpar a RenderTexture quando não for mais necessária
