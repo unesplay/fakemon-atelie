@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Draw_Engine : MonoBehaviour
 {
     public Camera m_camera;
@@ -10,6 +11,7 @@ public class Draw_Engine : MonoBehaviour
     public GameObject brush;
     LineRenderer currentLineRenderer;
     Vector2 lastPos;
+    public float lineWidth = 0.1f;
     public Rect drawingArea = new Rect(184, 761, 600, 600);
     bool IsWithinDrawingArea()
     {
@@ -37,6 +39,36 @@ public class Draw_Engine : MonoBehaviour
             currentLineRenderer = null;
         }
     }
+public void ClearBrushInstances()
+{
+    // Encontre todos os objetos do tipo brush (assumindo que brush é um prefab com um componente específico, como LineRenderer)
+    LineRenderer[] lineRenderers = FindObjectsOfType<LineRenderer>();
+    
+    foreach (LineRenderer lineRenderer in lineRenderers)
+    {
+        Destroy(lineRenderer.gameObject);
+    }
+
+    Debug.Log("Todas as instâncias da brush foram apagadas.");
+}
+    public void IncreaseLineWidth()
+{
+    lineWidth += 0.05f; // Aumenta a largura em 0.05 ou o valor que você preferir
+    if (currentLineRenderer != null)
+    {
+        currentLineRenderer.startWidth = lineWidth;
+        currentLineRenderer.endWidth = lineWidth;
+    }
+}
+    public void DecreaseLineWidth()
+{
+    lineWidth -= 0.05f; // Diminui a largura em 0.05 ou o valor que você preferir
+    if (currentLineRenderer != null)
+    {
+        currentLineRenderer.startWidth = lineWidth;
+        currentLineRenderer.endWidth = lineWidth;
+    }
+}
     
     public void MudarCor(Color cor)
     {
@@ -52,8 +84,13 @@ public class Draw_Engine : MonoBehaviour
 
     if (currentLineRenderer != null)
     {
+        currentLineRenderer.numCapVertices = 5; 
+        currentLineRenderer.numCornerVertices = 5; 
         currentLineRenderer.startColor = startAtual;
         currentLineRenderer.endColor = endAtual;
+
+        currentLineRenderer.startWidth = lineWidth;
+        currentLineRenderer.endWidth = lineWidth;
 
         Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
         currentLineRenderer.SetPosition(0, mousePos);
@@ -64,6 +101,7 @@ public class Draw_Engine : MonoBehaviour
         Debug.LogError("LineRenderer não foi encontrado no brushInstance!");
     }
 }
+
     
     void AddPoint(Vector2 pointPos)
 {
