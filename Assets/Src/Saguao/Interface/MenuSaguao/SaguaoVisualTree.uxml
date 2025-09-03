@@ -1,4 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Button text="Conferir Time" display-tooltip-when-elided="true" />
-    <ui:Button text="Sair do saguao" display-tooltip-when-elided="true" />
+    <ui:Button text="Conferir Time" display-tooltip-when-elided="true" name="bt-conferir-time" />
+    <ui:Button text="Sair do saguao" display-tooltip-when-elided="true" name="bt-sair" />
 </ui:UXML>
