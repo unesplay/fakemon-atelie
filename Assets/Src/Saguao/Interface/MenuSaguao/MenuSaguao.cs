@@ -27,7 +27,7 @@ public class MenuSaguao : MenuBehaviour<MenusSaguao>
 
     private void BtConferirTime(ClickEvent ev)
     {
-        manager.Navegar(this.GetEnumerador(), MenusSaguao.TIME);
+        NavegarPara(MenusSaguao.TIME);
     }
 
 

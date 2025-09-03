@@ -26,6 +26,6 @@ public class MenuTime : MenuBehaviour<MenusSaguao>
 
     private void BtVoltar(ClickEvent ev)
     {
-        manager.Navegar(this.GetEnumerador(), MenusSaguao.SAGUAO);
+        NavegarPara(MenusSaguao.SAGUAO);
     }
 }

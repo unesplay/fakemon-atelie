@@ -15,7 +15,7 @@ public abstract class MenuBehaviour<TT> : MonoBehaviour where TT : System.Enum
     private TT enumerador;
 
     [SerializeField]
-    protected MenuManagerBehaviour<TT> manager;
+    private MenuManagerBehaviour<TT> manager;
 
     protected UIDocument uiDocument;
 
@@ -41,6 +41,17 @@ public abstract class MenuBehaviour<TT> : MonoBehaviour where TT : System.Enum
     /// </summary>
     /// <returns> O valor do enumerador. </returns>
     public TT GetEnumerador() { return enumerador; }
+
+
+    /// <summary>
+    ///     Navega a partir deste menu, para outro.
+    ///     Efetivamente, chama <c> MenuManagerBehaviour.Navegar </c> para navegar deste menu para outro.
+    /// </summary>
+    /// <param name="para"> Representa para qual menu será navegado. </param>
+    public void NavegarPara(TT para)
+    {
+        manager.Navegar(enumerador, para);
+    }
 
 
     /// <summary>
