@@ -17,7 +17,7 @@ public abstract class MenuBehaviour<TT> : MonoBehaviour where TT : System.Enum
     [SerializeField]
     private MenuManagerBehaviour<TT> manager;
 
-    protected UIDocument uiDocument;
+    private UIDocument uiDocument;
 
     void Start()
     {
@@ -44,6 +44,12 @@ public abstract class MenuBehaviour<TT> : MonoBehaviour where TT : System.Enum
 
 
     /// <summary>
+    ///     Getter para o <c> UIDocument </c> deste objeto
+    /// </summary>
+    /// <returns> A referencia para o UIDocument </returns>
+    public UIDocument GetUIDocument() { return uiDocument; }
+
+    /// <summary>
     ///     Navega a partir deste menu, para outro.
     ///     Efetivamente, chama <c> MenuManagerBehaviour.Navegar </c> para navegar deste menu para outro.
     /// </summary>
@@ -56,20 +62,20 @@ public abstract class MenuBehaviour<TT> : MonoBehaviour where TT : System.Enum
 
     /// <summary>
     ///     Função usada ao navegar de outro menu para este.
-    ///     Pode ser sobrescrita, mas DEVE realizar a operação <c> uiDocument.rootVisualElement.style.display = DisplayStyle.Flex; </c>. 
+    ///     Pode ser sobrescrita, mas DEVE realizar a operação <c> GetUIDocument().rootVisualElement.style.display = DisplayStyle.Flex; </c>. 
     /// </summary>
     /// <param name="de"> Representa de onde foi navegado. </param>
     public virtual void Habilitar(TT de)
     {
-        uiDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+        GetUIDocument().rootVisualElement.style.display = DisplayStyle.Flex;
     }
 
     /// <summary>
     ///     Função usada ao navegar deeste menu para outro.
-    ///     Pode ser sobrescrita, mas DEVE realizar a operação <c> uiDocument.rootVisualElement.style.display = DisplayStyle.None; </c>.
+    ///     Pode ser sobrescrita, mas DEVE realizar a operação <c> GetUIDocument().rootVisualElement.style.display = DisplayStyle.None; </c>.
     /// </summary>
     public virtual void Desabilitar()
     {
-        uiDocument.rootVisualElement.style.display = DisplayStyle.None; 
+        GetUIDocument().rootVisualElement.style.display = DisplayStyle.None; 
     }
 }

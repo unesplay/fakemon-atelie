@@ -7,6 +7,5 @@ public class AtelieNavigationManager : MenuManagerBehaviour<MenusAtelie>
 
 public enum MenusAtelie
 {
-    ATELIE,
-    OUTRO
+    ATELIE
 }

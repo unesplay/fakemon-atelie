@@ -9,14 +9,14 @@ public class MenuAtelie : MenuBehaviour<MenusAtelie>
     public override void OnStart()
     {
         // Designa comportamento de botoes
-        AssingButtonClick("bt-conferir-time", BtConferirTime);
+        AssingButtonClick("bt-prosseguir", BtProsseguir);
         AssingButtonClick("bt-sair", BtSair);
     }
 
 
     private void AssingButtonClick(string btName, EventCallback<ClickEvent> callback)
     {
-        Button bt = uiDocument.rootVisualElement.Query<Button>(btName).First();
+        Button bt = GetUIDocument().rootVisualElement.Query<Button>(btName).First();
 
         if (bt != null)
             bt.RegisterCallback<ClickEvent>(callback);
@@ -25,9 +25,9 @@ public class MenuAtelie : MenuBehaviour<MenusAtelie>
     }
 
 
-    private void BtConferirTime(ClickEvent ev)
+    private void BtProsseguir(ClickEvent ev)
     {
-        NavegarPara(MenusAtelie.OUTRO);
+        Debug.Log("BtProsseguir");
     }
 
 
