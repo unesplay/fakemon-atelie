@@ -9,19 +9,8 @@ public class MenuSaguao : MenuBehaviour<MenusSaguao>
     public override void OnStart()
     {
         // Designa comportamento de botoes
-        AssingButtonClick("bt-conferir-time", BtConferirTime);
-        AssingButtonClick("bt-sair", BtSair);
-    }
-
-
-    private void AssingButtonClick(string btName, EventCallback<ClickEvent> callback)
-    {
-        Button bt = uiDocument.rootVisualElement.Query<Button>(btName).First();
-
-        if (bt != null)
-            bt.RegisterCallback<ClickEvent>(callback);
-        else
-            Debug.LogWarning("AssingButtonClick: botao '" + btName + "' nao encontrado");
+        UIToolkitUtils.AssingButtonClick(GetUIDocument(), "bt-conferir-time", BtConferirTime);
+        UIToolkitUtils.AssingButtonClick(GetUIDocument(), "bt-sair", BtSair);
     }
 
 

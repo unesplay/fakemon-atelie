@@ -9,19 +9,8 @@ public class MenuAtelie : MenuBehaviour<MenusAtelie>
     public override void OnStart()
     {
         // Designa comportamento de botoes
-        AssingButtonClick("bt-prosseguir", BtProsseguir);
-        AssingButtonClick("bt-sair", BtSair);
-    }
-
-
-    private void AssingButtonClick(string btName, EventCallback<ClickEvent> callback)
-    {
-        Button bt = GetUIDocument().rootVisualElement.Query<Button>(btName).First();
-
-        if (bt != null)
-            bt.RegisterCallback<ClickEvent>(callback);
-        else
-            Debug.LogWarning("AssingButtonClick: botao '" + btName + "' nao encontrado");
+        UIToolkitUtils.AssingButtonClick(GetUIDocument(), "bt-prosseguir", BtProsseguir);
+        UIToolkitUtils.AssingButtonClick(GetUIDocument(), "bt-sair", BtSair);
     }
 
 
