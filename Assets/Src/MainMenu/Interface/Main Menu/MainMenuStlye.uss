@@ -1,0 +1,28 @@
+.titulo {
+    font-size: 100px;
+    left: 0;
+    top: 100px;
+}
+
+.stbt_menu {
+    width: 500px;
+    height: 40px;
+    left: auto;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    -unity-text-align: middle-center;
+}
+
+.subtitulo {
+    align-items: center;
+    -unity-text-align: upper-center;
+    font-size: 20px;
+}
+
+.texto {
+    align-items: center;
+    -unity-text-align: upper-center;
+    bottom: auto;
+    justify-content: flex-start;
+}
