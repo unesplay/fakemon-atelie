@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 328998667}
+  - component: {fileID: 328998668}
   m_Layer: 0
   m_Name: Menus
   m_TagString: Untagged
@@ -153,9 +154,27 @@ Transform:
   m_Children:
   - {fileID: 524805167}
   - {fileID: 2097167284}
+  - {fileID: 593749086}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &328998668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328998666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72401a05c7d33e24abc5877cc9626579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuAtual: 0
+  menuObjects:
+  - {fileID: 524805168}
+  - {fileID: 2097167286}
+  - {fileID: 593749084}
 --- !u!1 &524805165
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524805167}
   - component: {fileID: 524805166}
+  - component: {fileID: 524805168}
   m_Layer: 5
   m_Name: Menu principal
   m_TagString: Untagged
@@ -203,6 +223,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 328998667}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &524805168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524805165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038f8989baf6d284da327d614b9b1491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enumerador: 0
+  manager: {fileID: 328998668}
+--- !u!1 &593749083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 593749086}
+  - component: {fileID: 593749085}
+  - component: {fileID: 593749084}
+  m_Layer: 0
+  m_Name: Menu criacao
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &593749084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593749083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0f25195657828489399da02a551c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enumerador: 2
+  manager: {fileID: 328998668}
+--- !u!114 &593749085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593749083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: da00ebf357b2f464a912b1d25ef14433, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: ad7423a81dba4bf4d92deae53020362a, type: 3}
+  m_SortingOrder: 0
+--- !u!4 &593749086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593749083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 328998667}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &863308352
 GameObject:
@@ -298,6 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097167284}
   - component: {fileID: 2097167285}
+  - component: {fileID: 2097167286}
   m_Layer: 5
   m_Name: "Menu configura\xE7\xE3o"
   m_TagString: Untagged
@@ -336,3 +434,17 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 3e1c516c39ee2df468cda56b0aa5ee56, type: 3}
   m_SortingOrder: 0
+--- !u!114 &2097167286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097167283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66ef333815806349b82aa9049643d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enumerador: 1
+  manager: {fileID: 328998668}

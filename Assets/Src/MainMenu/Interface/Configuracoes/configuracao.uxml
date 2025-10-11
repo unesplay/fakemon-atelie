@@ -1,8 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Src/MainMenu/Interface/Main%20Menu/MainMenuStlye.uss?fileID=7433441132597879392&amp;guid=29d671b41e1596642aaf04bb8106d980&amp;type=3#MainMenuStlye" />
-    <ui:Button text="Aumentar e Diminuir Audio    " display-tooltip-when-elided="true" name="bt_audio" class="stbt_menu" style="align-items: center;" />
-    <ui:Button text="Fonte pra Dislexia" display-tooltip-when-elided="true" name="bt_acessibilidade1" class="stbt_menu" style="align-items: center;" />
-    <ui:Button text="Modo Daltonico" display-tooltip-when-elided="true" name="bt_acessibilidade2" class="stbt_menu" style="align-items: center;" />
+    <ui:Button text="Aumentar e Diminuir Audio    " display-tooltip-when-elided="true" name="bt-audio" class="stbt_menu" style="align-items: center;" />
+    <ui:Button text="Fonte pra Dislexia" display-tooltip-when-elided="true" name="bt-acessibilidade1" class="stbt_menu" style="align-items: center;" />
+    <ui:Button text="Modo Daltonico" display-tooltip-when-elided="true" name="bt-acessibilidade2" class="stbt_menu" style="align-items: center;" />
+    <ui:Button text="Voltar" display-tooltip-when-elided="true" name="bt-voltar" class="stbt_menu" style="align-items: center;" />
     <ui:Label text="Créditos" display-tooltip-when-elided="true" name="titulo_credito" class="subtitulo" style="position: relative; top: 140px; left: 4px; width: 700px;" />
     <ui:Label text="orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." display-tooltip-when-elided="true" name="tx_credito" class="texto" style="position: relative; top: 140px; left: 4px; width: 443px; height: 62px; white-space: normal; -unity-text-align: middle-center;" />
 </ui:UXML>
