@@ -8,6 +8,8 @@ using System;
 ///     Devem ser usadas em conjunto com um <c> MenuBehaviour </c>, a fim de gerir todos os objetos filhos. 
 /// </summary>
 /// <typeparam name="TT"> Enumerador representando todos os Menus (i.e. todos os objetos irmãos). </typeparam>
+/// 
+[DefaultExecutionOrder(1)]
 public abstract class MenuManagerBehaviour<TT> : MonoBehaviour where TT : System.Enum
 {
     [SerializeField]
@@ -72,7 +74,7 @@ public abstract class MenuManagerBehaviour<TT> : MonoBehaviour where TT : System
     /// <exception cref="Exception"> Arremessada caso não seja possivel navegar, devido ao fato de um dos menus não estar definido. </exception>
     public virtual void Navegar(TT de, TT para)
     {
-        if (menusDict.ContainsKey(de) & menusDict.ContainsKey(para))
+        if (menusDict.ContainsKey(de) && menusDict.ContainsKey(para))
         {
             menusDict[de].Desabilitar();
             menusDict[para].Habilitar(de);
